@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<produtos>
+  <produto>
+    <id>1</id>
+    <nome>Smartphone Galaxy A10</nome>
+    <marca>Samsung</marca>
+    <preco>199.99</preco>
+    <stock>30</stock>
+    <caracteristicas>
+      <tela>6.2 polegadas</tela>
+      <bateria>3400mAh</bateria>
+      <armazenamento>32GB</armazenamento>
+    </caracteristicas>
+  </produto>
+  <produto>
+    <id>2</id>
+    <nome>Auriculares Bluetooth</nome>
+    <marca>JBL</marca>
+    <preco>59.90</preco>
+    <stock>50</stock>
+    <caracteristicas>
+      <tela>n/a</tela>
+      <bateria>500mAh</bateria>
+      <armazenamento>n/a</armazenamento>
+    </caracteristicas>
+  </produto>
+  <produto>
+    <id>3</id>
+    <nome>Portátil Inspiron 15</nome>
+    <marca>Dell</marca>
+    <preco>799.99</preco>
+    <stock>10</stock>
+    <caracteristicas>
+      <tela>15.6 polegadas</tela>
+      <bateria>4000mAh</bateria>
+      <armazenamento>512GB</armazenamento>
+    </caracteristicas>
+  </produto>
+  <produto>
+    <id>4</id>
+    <nome>Smartwatch</nome>
+    <marca>Xiaomi</marca>
+    <preco>149.99</preco>
+    <stock>20</stock>
+    <caracteristicas>
+      <tela>1.4 polegadas</tela>
+      <bateria>350mAh</bateria>
+      <armazenamento>8GB</armazenamento>
+    </caracteristicas>
+  </produto>
+  <produto>
+    <id>5</id>
+    <nome>Coluna Bluetooth</nome>
+    <marca>BOSE</marca>
+    <preco>140.90</preco>
+    <stock>40</stock>
+    <caracteristicas>
+      <tela>n/a</tela>
+      <bateria>1500mAh</bateria>
+      <armazenamento>n/a</armazenamento>
+    </caracteristicas>
+  </produto>
+  <produto>
+    <id>6</id>
+    <nome>DSLR Rebel T5</nome>
+    <marca>Canon</marca>
+    <preco>500.0</preco>
+    <stock>20</stock>
+    <caracteristicas>
+      <tela>3 polegadas</tela>
+      <bateria>1200mAh</bateria>
+      <armazenamento>SD Card</armazenamento>
+    </caracteristicas>
+  </produto>
+  <produto>
+    <id>7</id>
+    <nome>Rato de computador</nome>
+    <marca>SteelSeries</marca>
+    <preco>70.0</preco>
+    <stock>20</stock>
+    <caracteristicas>
+      <tela>na</tela>
+      <bateria>na</bateria>
+      <armazenamento>na</armazenamento>
+    </caracteristicas>
+  </produto>
+</produtos>

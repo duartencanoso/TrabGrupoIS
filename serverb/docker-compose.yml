@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  soap:
+    build: ./soap
+    container_name: soap_service
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_URL=mongodb://192.168.2.110:27017
+    restart: always
