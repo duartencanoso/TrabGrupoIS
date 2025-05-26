@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "id": { "type": "integer" },
+      "nome": { "type": "string" },
+      "marca": { "type": "string" },
+      "preco": { "type": "number" },
+      "stock": { "type": "integer" },
+      "caracteristicas": {
+        "type": "object",
+        "properties": {
+          "tela": { "type": "string" },
+          "bateria": { "type": "string" },
+          "armazenamento": { "type": "string" }
+        },
+        "required": ["tela", "bateria", "armazenamento"]
+      }
+    },
+    "required": ["id", "nome", "marca", "preco", "stock", "caracteristicas"]
+  }
+  

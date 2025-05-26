@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package catalogo;
+
+import "google/protobuf/empty.proto";
+
+
+message Produto {
+  int32 id = 1;
+  string nome = 2;
+  string marca = 3;
+  float preco = 4;
+  int32 stock = 5;
+  string tela = 6;
+  string bateria = 7;
+  string armazenamento = 8;
+}
+
+message ProdutoId {
+  int32 id = 1;
+}
+
+message ProdutoResponse {
+  bool sucesso = 1;
+  string mensagem = 2;
+}
+
+message ListaProdutos {
+  repeated Produto produtos = 1;
+}
+
+service ProdutoService {
+  rpc ListarProdutos (google.protobuf.Empty) returns (ListaProdutos);
+  rpc AdicionarProduto (Produto) returns (ProdutoResponse);
+  rpc EditarProduto (Produto) returns (ProdutoResponse);
+  rpc RemoverProduto (ProdutoId) returns (ProdutoResponse);
+  rpc ListarProdutosStream (google.protobuf.Empty) returns (stream Produto);
+}

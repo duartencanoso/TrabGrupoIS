@@ -1,0 +1,6 @@
+Flask
+graphene
+Flask-GraphQL==2.0.1
+jsonschema
+pymongo
+dnspython

@@ -1,0 +1,24 @@
+services:
+  graphql:
+    build: ./graphql
+    container_name: graphql_service
+    ports:
+      - "5001:5001"
+    environment:
+      - MONGO_URL=mongodb://192.168.2.110:27017
+    networks:
+      - shared_net
+
+  grpc:
+    build: ./grpc
+    container_name: grpc_service
+    ports:
+      - "50051:50051"
+    environment:
+      - MONGO_URL=mongodb://192.168.2.110:27017
+    networks:
+      - shared_net
+
+networks:
+  shared_net:
+    driver: bridge
