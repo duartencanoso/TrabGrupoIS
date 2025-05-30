@@ -3,3 +3,7 @@ pymongo
 flask-cors
 jsonschema
 jsonpath-ng
+flask-socketio
+eventlet
+python-jose[cryptography]
+requests

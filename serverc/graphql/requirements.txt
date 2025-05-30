@@ -4,3 +4,6 @@ Flask-GraphQL==2.0.1
 jsonschema
 pymongo
 dnspython
+python-jose[cryptography]
+requests
+cryptography

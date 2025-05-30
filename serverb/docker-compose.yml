@@ -8,4 +8,26 @@ services:
       - "8000:8000"
     environment:
       - MONGO_URL=mongodb://192.168.2.110:27017
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq:5672/  # Ligação ao RabbitMQ
+    depends_on:
+      - rabbitmq
+    networks:
+      - soap_net
     restart: always
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"    # Porta para AMQP (comunicação)
+      - "15672:15672"  # Porta para interface de gestão web
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - soap_net
+    restart: always
+
+networks:
+  soap_net:
+    driver: bridge

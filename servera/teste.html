@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WebSocket Teste - Produtos</title>
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>WebSocket Teste - Produtos</h1>
+  <ul id="mensagens"></ul>
+
+  <script>
+    // Conectar ao servidor
+    const socket = io("http://192.168.2.110:5000");
+
+    socket.on("connect", () => {
+      console.log("Conectado ao servidor WebSocket!");
+      const li = document.createElement("li");
+      li.textContent = "✅ Conectado ao WebSocket!";
+      document.getElementById("mensagens").appendChild(li);
+    });
+
+    socket.on("disconnect", () => {
+      const li = document.createElement("li");
+      li.textContent = "⚠️ Desconectado do WebSocket!";
+      document.getElementById("mensagens").appendChild(li);
+    });
+
+    // Receber eventos de novos produtos
+    socket.on("novo_produto", (produto) => {
+      const li = document.createElement("li");
+      li.textContent = `🆕 Novo produto adicionado: ${JSON.stringify(produto)}`;
+      document.getElementById("mensagens").appendChild(li);
+    });
+
+    // Receber eventos de produtos editados
+    socket.on("produto_editado", (produto) => {
+      const li = document.createElement("li");
+      li.textContent = `✏️ Produto editado: ${JSON.stringify(produto)}`;
+      document.getElementById("mensagens").appendChild(li);
+    });
+
+    // Receber eventos de produtos removidos
+    socket.on("produto_removido", (info) => {
+      const li = document.createElement("li");
+      li.textContent = `🗑️ Produto removido (ID: ${info.id})`;
+      document.getElementById("mensagens").appendChild(li);
+    });
+  </script>
+</body>
+</html>

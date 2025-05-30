@@ -2,3 +2,6 @@ grpcio
 grpcio-tools
 protobuf
 pymongo
+python-jose[cryptography]
+requests
+cryptography

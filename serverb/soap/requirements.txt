@@ -1,3 +1,6 @@
 spyne
 lxml
 pymongo
+pika
+python-jose[cryptography]
+requests
